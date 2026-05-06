@@ -399,6 +399,67 @@ nav ul a:hover::after {
   100% { transform: translateX(-50%); }
 }
 
+/* ============ IMPRENSA · Como visto em ============ */
+.imprensa-section {
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+
+.imprensa-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.imprensa-label {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.imprensa-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+}
+
+.imprensa-veiculo {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  letter-spacing: -0.01em;
+  opacity: 0.85;
+  transition: opacity 0.25s ease;
+}
+
+.imprensa-veiculo:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.imprensa-divider {
+  color: var(--accent);
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .imprensa-section {
+    padding: 2.5rem 1.25rem;
+  }
+  .imprensa-veiculo {
+    font-size: 0.95rem;
+  }
+}
+
 /* ============ SECTION COMMONS ============ */
 section {
   padding: 7rem 2rem;
@@ -1038,6 +1099,164 @@ section {
   box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
 }
 
+/* ============ ALDEIA NÃO MONO ============ */
+#aldeia {
+  padding: 7rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.aldeia-box {
+  background: linear-gradient(135deg, var(--sage) 0%, var(--plum) 100%);
+  color: var(--paper);
+  padding: 5rem 4rem;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.aldeia-box::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 70%;
+  height: 200%;
+  background: radial-gradient(circle, var(--mustard) 0%, transparent 65%);
+  opacity: 0.18;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.aldeia-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+}
+
+.aldeia-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(245, 241, 234, 0.15);
+  border: 1px solid rgba(245, 241, 234, 0.25);
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+  color: var(--paper);
+  font-size: 0.7rem;
+}
+
+.aldeia-pulse {
+  width: 6px; height: 6px;
+  background: var(--mustard);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+#aldeia .section-label {
+  color: var(--mustard);
+}
+
+#aldeia .section-label::before {
+  background: var(--mustard);
+}
+
+.aldeia-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.3rem, 4.8vw, 3.8rem);
+  line-height: 1.05;
+  margin: 1rem 0 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.aldeia-title .italic {
+  font-style: italic;
+  color: var(--mustard);
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+}
+
+.aldeia-desc {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+  max-width: 640px;
+  line-height: 1.65;
+}
+
+.aldeia-desc strong {
+  color: var(--mustard);
+  font-weight: 600;
+}
+
+.aldeia-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.aldeia-feature {
+  padding: 1.5rem;
+  background: rgba(245, 241, 234, 0.08);
+  border: 1px solid rgba(245, 241, 234, 0.12);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.aldeia-feature:hover {
+  background: rgba(245, 241, 234, 0.12);
+  transform: translateY(-3px);
+}
+
+.aldeia-feature-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.aldeia-feature h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--paper);
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+}
+
+.aldeia-feature p {
+  font-size: 0.88rem;
+  opacity: 0.78;
+  line-height: 1.5;
+}
+
+.aldeia-btn {
+  background: var(--mustard);
+  color: var(--ink);
+  padding: 1.1rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.aldeia-btn:hover {
+  background: var(--paper);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(212, 160, 23, 0.4);
+}
+
+@media (max-width: 768px) {
+  .aldeia-box {
+    padding: 3rem 1.5rem;
+  }
+}
+
 /* ============ LIVES ============ */
 #lives {
   padding: 7rem 2rem;
@@ -1299,7 +1518,7 @@ section {
 
 .credenciais {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
   margin: 2.5rem 0;
 }
@@ -1712,6 +1931,24 @@ footer {
   </div>
 </div>
 
+<!-- IMPRENSA · Como visto em -->
+<section id="imprensa" class="imprensa-section">
+  <div class="imprensa-inner">
+    <span class="imprensa-label mono">Como visto em</span>
+    <div class="imprensa-list">
+      <span class="imprensa-veiculo">UOL Viva Bem</span>
+      <span class="imprensa-divider">·</span>
+      <span class="imprensa-veiculo">Yahoo Vida e Estilo</span>
+      <span class="imprensa-divider">·</span>
+      <span class="imprensa-veiculo">Portal IG Delas</span>
+      <span class="imprensa-divider">·</span>
+      <span class="imprensa-veiculo">Revista GZH</span>
+      <span class="imprensa-divider">·</span>
+      <span class="imprensa-veiculo">Costa Norte</span>
+    </div>
+  </div>
+</section>
+
 <!-- ATENDIMENTO -->
 <section id="atendimento">
   <div class="section-header">
@@ -1825,7 +2062,6 @@ footer {
       </blockquote>
       
       <div class="livro-cta-row">
-        <!-- TODO: confirmar URL definitiva do livro na Amazon (ASIN B09GBJZFYK encontrado em busca pública) -->
         <a href="https://www.amazon.com.br/dp/B09GBJZFYK" class="livro-cta-primary" target="_blank" rel="noopener">
           Comprar na Amazon
           <span>↗</span>
@@ -1880,9 +2116,9 @@ footer {
         você não está sozinhx.
       </h2>
       <p class="comunidade-desc">
-        Uma comunidade no WhatsApp para pessoas vivendo, pensando ou questionando a não-monogamia. Espaço de troca, acolhimento e conteúdo exclusivo — com moderação cuidadosa e tom livre de julgamento.
+        Comunidade no WhatsApp que <strong>eu criei em 2021</strong> para pessoas vivendo, descobrindo ou questionando a não-monogamia. Hoje é gerida pela própria comunidade — segue ativa, com troca real entre pares e tom livre de julgamento.
       </p>
-      
+
       <div class="comunidade-features">
         <div class="comunidade-feature">
           <div class="comunidade-feature-num">01</div>
@@ -1891,17 +2127,17 @@ footer {
         </div>
         <div class="comunidade-feature">
           <div class="comunidade-feature-num">02</div>
-          <h4>Conteúdo exclusivo</h4>
-          <p>Reflexões, artigos e materiais que não aparecem em outro lugar.</p>
+          <h4>Gerida pela comunidade</h4>
+          <p>Espaço autônomo, com combinados coletivos e cuidado mútuo.</p>
         </div>
         <div class="comunidade-feature">
           <div class="comunidade-feature-num">03</div>
-          <h4>Moderação consciente</h4>
-          <p>Ambiente seguro, com combinados claros e cuidado coletivo.</p>
+          <h4>Acesso aberto</h4>
+          <p>Entrada livre, sem filtros — só comum-acordo de respeito mútuo.</p>
         </div>
       </div>
       
-      <a href="https://api.whatsapp.com/send?phone=5561991620965&text=Oi!%20Quero%20entrar%20na%20comunidade%20SOS%20N%C3%A3o%20Mono." class="whatsapp-btn" target="_blank">
+      <a href="https://chat.whatsapp.com/F7eZAFwwUcQ266upHuiEeS" class="whatsapp-btn" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.570-.01-.198 0-.520.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
@@ -1911,11 +2147,53 @@ footer {
   </div>
 </section>
 
+<!-- ALDEIA NÃO MONO · App próprio -->
+<section id="aldeia">
+  <div class="aldeia-box">
+    <div class="aldeia-content">
+      <div class="aldeia-tag mono">
+        <span class="aldeia-pulse"></span>
+        Iniciativa sem fins lucrativos
+      </div>
+      <div class="section-label mono">05 · Aldeia Não Mono</div>
+      <h2 class="aldeia-title">
+        Um app feito para <span class="italic">acolher</span> a comunidade não-mono brasileira.
+      </h2>
+      <p class="aldeia-desc">
+        Criei a <strong>Aldeia Não Mono</strong> como projeto pessoal — um ecossistema com portal e aplicativo desenhado especificamente para quem vive, descobre ou pesquisa relações não-monogâmicas. É a primeira rede social brasileira pensada para essa comunidade, livre de fetichismo e construída como espaço seguro de pertencimento.
+      </p>
+
+      <div class="aldeia-features">
+        <div class="aldeia-feature">
+          <span class="aldeia-feature-icon">🌐</span>
+          <h4>Portal curado</h4>
+          <p>Estatísticas, eventos, perfis, podcasts, livros, filmes, vozes especialistas e profissionais.</p>
+        </div>
+        <div class="aldeia-feature">
+          <span class="aldeia-feature-icon">📱</span>
+          <h4>App próprio</h4>
+          <p>Rede social pra conectar pessoas em relações não-monogâmicas — sem swipe, sem fetichismo.</p>
+        </div>
+        <div class="aldeia-feature">
+          <span class="aldeia-feature-icon">🤝</span>
+          <h4>Sem fins lucrativos</h4>
+          <p>Iniciativa pessoal, mantida por amor ao tema e à comunidade. Acesso livre.</p>
+        </div>
+      </div>
+
+      <a href="https://aldeianaomono.com.br" class="aldeia-btn" target="_blank" rel="noopener">
+        Conhecer a Aldeia
+        <span>↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- LIVES -->
 <section id="lives">
   <div class="section-header">
     <div>
-      <div class="section-label mono">05 · Biblioteca de Lives</div>
+      <div class="section-label mono">06 · Biblioteca de Lives</div>
       <h2 class="section-title display">
         Conversas <br>
         <span class="italic">que você pode<br>
@@ -2033,7 +2311,7 @@ footer {
     </div>
     
     <div class="sobre-text">
-      <div class="section-label mono">06 · Sobre</div>
+      <div class="section-label mono">07 · Sobre</div>
       <h2 class="section-title display">
         Uma clínica que <br>
         <span class="italic">não julga.</span>
@@ -2043,6 +2321,9 @@ footer {
       </p>
       <p class="sobre-desc">
         Minha clínica se debruça sobre configurações afetivas que a clínica tradicional ainda olha com desconfiança. Atendo casais em não-monogamia consensual, poliamor, relações abertas, anarquismo relacional. E, principalmente, casais hétero ainda monogâmicos que estão pensando em abrir a relação — e querem fazer isso com cuidado, sem destruir o que construíram.
+      </p>
+      <p class="sobre-desc">
+        Além do consultório, criei a <a href="#aldeia" style="color:var(--accent);">Aldeia Não Mono</a> (app sem fins lucrativos), idealizei a comunidade <a href="#comunidade" style="color:var(--accent);">SOS Não Mono</a> (hoje gerida pela própria comunidade), publiquei o livro <a href="#livro" style="color:var(--accent);">Não Monogamia Responsável</a> e prefaciei um livro a ser lançado em breve sobre o tema. Também já fui ouvido em veículos como UOL, Yahoo, IG Delas, GZH e Costa Norte.
       </p>
       
       <div class="credenciais">
@@ -2055,12 +2336,16 @@ footer {
           <span>Pós-graduação stricto sensu</span>
         </div>
         <div class="credencial">
+          <strong>Dra. Regina Navarro Lins</strong>
+          <span>Formação em Sexologia &amp; Terapia de Casais</span>
+        </div>
+        <div class="credencial">
           <strong>EMDR + Brainspotting</strong>
           <span>Especialista em trauma e regulação emocional</span>
         </div>
         <div class="credencial">
           <strong>20 anos de clínica</strong>
-          <span>Sexologia · Terapia de casais · Neurociência afetiva</span>
+          <span>Neurociência afetiva · não-monogamia consensual</span>
         </div>
       </div>
       
@@ -2076,7 +2361,7 @@ footer {
 <section id="artigos">
   <div class="section-header">
     <div>
-      <div class="section-label mono">07 · Artigos</div>
+      <div class="section-label mono">08 · Artigos</div>
       <h2 class="section-title display">
         Para <span class="italic">ler com<br>
         calma.</span>
