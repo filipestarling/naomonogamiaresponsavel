@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Plano · Upgrade Profissional · Filipe Starling</title>
+<meta name="description" content="Página de gestão interna — não indexada." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #14110f;
+  --paper: #f5f1ea;
+  --paper-deep: #ebe4d7;
+  --paper-card: #ffffff;
+  --accent: #ff4d2e;
+  --accent-soft: #ffd6c9;
+  --plum: #4a1e3a;
+  --sage: #6b7355;
+  --mustard: #d4a017;
+  --green: #2d8659;
+  --green-soft: #d4ebe0;
+  --red: #c4452a;
+  --red-soft: #f8d4cc;
+  --blue: #2d5e8f;
+  --blue-soft: #cfe0f0;
+  --muted: #78706a;
+  --line: rgba(20, 17, 15, 0.10);
+  --line-strong: rgba(20, 17, 15, 0.22);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter Tight', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+  font-weight: 400;
+  font-size: 14.5px;
+  min-height: 100vh;
+}
+
+.display { font-family: 'Fraunces', serif; font-weight: 400; letter-spacing: -0.02em; }
+.mono { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+::selection { background: var(--accent); color: var(--paper); }
+
+/* ===== HEADER ===== */
+.page-header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 50%;
+  height: 200%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 65%);
+  opacity: 0.18;
+  filter: blur(40px);
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.header-left .mono { color: var(--accent-soft); margin-bottom: 0.5rem; }
+
+.page-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.page-title .italic {
+  font-style: italic;
+  color: var(--accent);
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+}
+
+.page-subtitle {
+  opacity: 0.72;
+  max-width: 600px;
+  font-size: 0.95rem;
+}
+
+.global-progress {
+  background: rgba(245, 241, 234, 0.08);
+  border: 1px solid rgba(245, 241, 234, 0.15);
+  border-radius: 14px;
+  padding: 1rem 1.4rem;
+  min-width: 250px;
+}
+
+.global-progress-label { font-size: 0.7rem; opacity: 0.7; margin-bottom: 0.3rem; }
+.global-progress-num {
+  font-family: 'Fraunces', serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
+  line-height: 1;
+}
+.global-progress-bar {
+  margin-top: 0.6rem;
+  height: 5px;
+  background: rgba(245, 241, 234, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.global-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--mustard));
+  transition: width 0.6s ease;
+}
+
+/* ===== MAIN LAYOUT ===== */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+section + section { margin-top: 3.5rem; }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.section-title .italic {
+  font-style: italic;
+  color: var(--accent);
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+}
+
+.section-meta { font-size: 0.8rem; color: var(--muted); }
+
+/* ===== STATUS CARDS ===== */
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.status-card {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.4rem;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.status-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 17, 15, 0.05);
+}
+
+.status-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.status-card-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.status-card-value {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.status-card-detail {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.status-card-bar {
+  margin-top: 0.7rem;
+  height: 4px;
+  background: var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.status-card-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.status-card.green .status-card-fill { background: var(--green); }
+.status-card.blue .status-card-fill { background: var(--blue); }
+.status-card.mustard .status-card-fill { background: var(--mustard); }
+.status-card.plum .status-card-fill { background: var(--plum); }
+
+/* ===== TIMELINE / ROADMAP ===== */
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.roadmap-phase {
+  padding: 1.5rem 1.2rem;
+  position: relative;
+  border-right: 1px solid var(--line);
+}
+
+.roadmap-phase:last-child { border-right: none; }
+
+.roadmap-phase.current {
+  background: linear-gradient(180deg, var(--accent-soft) 0%, transparent 100%);
+}
+
+.roadmap-phase.next {
+  background: linear-gradient(180deg, rgba(212, 160, 23, 0.12) 0%, transparent 100%);
+}
+
+.roadmap-phase-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+}
+
+.roadmap-phase-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+}
+
+.roadmap-phase-period {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.roadmap-phase-items {
+  margin-top: 0.8rem;
+  font-size: 0.82rem;
+  color: var(--ink);
+  line-height: 1.55;
+  list-style: none;
+}
+
+.roadmap-phase-items li {
+  padding: 0.2rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.roadmap-phase-items li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.roadmap-phase-status {
+  margin-top: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  display: inline-block;
+}
+
+.status-now { background: var(--accent); color: var(--paper); }
+.status-next { background: var(--mustard); color: var(--ink); }
+.status-future { background: var(--paper-deep); color: var(--muted); }
+.status-done { background: var(--green); color: var(--paper); }
+
+/* ===== DECISÕES BLOQUEADORAS ===== */
+.decisoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 1rem;
+}
+
+.decisao {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--red);
+  border-radius: 10px;
+  padding: 1.1rem 1.2rem;
+  transition: all 0.25s ease;
+}
+
+.decisao.priority-high { border-left-color: var(--red); }
+.decisao.priority-med { border-left-color: var(--mustard); }
+.decisao.priority-low { border-left-color: var(--blue); }
+
+.decisao.resolved {
+  background: var(--green-soft);
+  border-left-color: var(--green);
+  opacity: 0.8;
+}
+
+.decisao-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.decisao-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.decisao-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  flex-wrap: wrap;
+}
+
+.decisao-tag {
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  background: var(--paper-deep);
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.decisao-tag.tag-livro { background: var(--accent-soft); color: var(--red); }
+.decisao-tag.tag-site { background: var(--blue-soft); color: var(--blue); }
+.decisao-tag.tag-imprensa { background: rgba(212, 160, 23, 0.2); color: #a07b14; }
+.decisao-tag.tag-atendimento { background: var(--green-soft); color: var(--green); }
+
+.decisao-time {
+  font-size: 0.72rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.decisao-resolve {
+  margin-top: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+}
+
+.decisao-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background: var(--paper);
+  flex-shrink: 0;
+}
+
+.decisao-checkbox:hover { border-color: var(--accent); }
+
+.decisao-checkbox.checked {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--paper);
+}
+
+.decisao-checkbox::after {
+  content: "✓";
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+}
+
+.decisao-checkbox.checked::after { opacity: 1; }
+
+.decisao-resolve-label {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.decisao-checkbox.checked + .decisao-resolve-label {
+  color: var(--green);
+  font-weight: 500;
+}
+
+/* ===== KANBAN POR CATEGORIA ===== */
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.2rem;
+}
+
+.kanban-col {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.kanban-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 0.7rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.kanban-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kanban-emoji { font-size: 1.2rem; }
+
+.kanban-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  background: var(--paper-deep);
+  padding: 0.15rem 0.55rem;
+  border-radius: 100px;
+}
+
+.kanban-tasks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task {
+  display: flex;
+  gap: 0.65rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--paper);
+  border-radius: 8px;
+  transition: all 0.18s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.task:hover {
+  background: var(--paper-deep);
+  border-color: var(--line);
+}
+
+.task-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background: var(--paper-card);
+}
+
+.task-checkbox::after {
+  content: "✓";
+  font-size: 11px;
+  color: var(--paper);
+  font-weight: 600;
+  opacity: 0;
+}
+
+.task.done .task-checkbox {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.task.done .task-checkbox::after { opacity: 1; }
+
+.task-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.task-title {
+  font-size: 0.88rem;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.task.done .task-title {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task-meta {
+  font-size: 0.7rem;
+  color: var(--muted);
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.task-time {
+  background: var(--paper-deep);
+  padding: 0.05rem 0.4rem;
+  border-radius: 100px;
+}
+
+.kanban-progress {
+  margin-top: 0.9rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--line);
+}
+
+.kanban-progress-bar {
+  height: 4px;
+  background: var(--paper-deep);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.kanban-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.kanban-progress-text {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+/* ===== ESSA SEMANA ===== */
+.semana-card {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.semana-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(circle, var(--mustard) 0%, transparent 65%);
+  opacity: 0.15;
+  filter: blur(30px);
+}
+
+.semana-content { position: relative; z-index: 2; }
+
+.semana-tag {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--paper);
+  padding: 0.25rem 0.7rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.semana-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.semana-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.semana-item {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(245, 241, 234, 0.12);
+  align-items: center;
+}
+
+.semana-item:last-child { border-bottom: none; }
+
+.semana-item-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--mustard);
+  min-width: 2.2rem;
+  font-weight: 300;
+}
+
+.semana-item-text {
+  flex: 1;
+  font-size: 0.92rem;
+}
+
+.semana-item-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--accent-soft);
+  letter-spacing: 0.06em;
+}
+
+/* ===== FOOTER / RESET ===== */
+.footer-bar {
+  margin-top: 3rem;
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.btn-reset {
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.btn-reset:hover {
+  background: var(--red);
+  color: var(--paper);
+  border-color: var(--red);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .roadmap { grid-template-columns: 1fr 1fr; }
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .global-progress { width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .roadmap { grid-template-columns: 1fr; }
+  .roadmap-phase { border-right: none; border-bottom: 1px solid var(--line); }
+  .roadmap-phase:last-child { border-bottom: none; }
+  main { padding: 1.5rem 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="mono">Página interna · não indexada · /plano</div>
+      <h1 class="page-title display">
+        Plano de <span class="italic">upgrade</span> profissional
+      </h1>
+      <p class="page-subtitle">
+        Roadmap pra transformar autoridade existente em receita recorrente. Marca o que tu vai resolvendo — o progresso fica salvo neste navegador.
+      </p>
+    </div>
+    <div class="global-progress">
+      <div class="global-progress-label mono" style="color: rgba(245,241,234,0.7);">Progresso global</div>
+      <div class="global-progress-num" id="globalProgressNum">0%</div>
+      <div class="global-progress-bar">
+        <div class="global-progress-fill" id="globalProgressFill" style="width: 0%"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. STATUS POR FRENTE -->
+  <section id="status">
+    <div class="section-head">
+      <h2 class="section-title">Status por <span class="italic">frente</span></h2>
+      <span class="section-meta">4 frentes ativas · clica nos cards pra rolar até a seção</span>
+    </div>
+
+    <div class="status-grid">
+      <a href="#kanban-livro" style="text-decoration:none;color:inherit;"><div class="status-card" data-frente="livro">
+        <span class="status-card-icon">📚</span>
+        <div class="status-card-label">Livro 2ª edição</div>
+        <div class="status-card-value" id="statusLivroValue">0%</div>
+        <div class="status-card-detail" id="statusLivroDetail">— de — tarefas</div>
+        <div class="status-card-bar"><div class="status-card-fill" id="statusLivroFill" style="width:0%"></div></div>
+      </div></a>
+      <a href="#kanban-site" style="text-decoration:none;color:inherit;"><div class="status-card blue" data-frente="site">
+        <span class="status-card-icon">🌐</span>
+        <div class="status-card-label">Site v2 → v3</div>
+        <div class="status-card-value" id="statusSiteValue">0%</div>
+        <div class="status-card-detail" id="statusSiteDetail">— de — tarefas</div>
+        <div class="status-card-bar"><div class="status-card-fill" id="statusSiteFill" style="width:0%"></div></div>
+      </div></a>
+      <a href="#kanban-imprensa" style="text-decoration:none;color:inherit;"><div class="status-card mustard" data-frente="imprensa">
+        <span class="status-card-icon">📰</span>
+        <div class="status-card-label">Imprensa</div>
+        <div class="status-card-value" id="statusImprensaValue">0%</div>
+        <div class="status-card-detail" id="statusImprensaDetail">— de — tarefas</div>
+        <div class="status-card-bar"><div class="status-card-fill" id="statusImprensaFill" style="width:0%"></div></div>
+      </div></a>
+      <a href="#kanban-atendimento" style="text-decoration:none;color:inherit;"><div class="status-card green" data-frente="atendimento">
+        <span class="status-card-icon">💼</span>
+        <div class="status-card-label">Atendimento Premium</div>
+        <div class="status-card-value" id="statusAtendValue">0%</div>
+        <div class="status-card-detail" id="statusAtendDetail">— de — tarefas</div>
+        <div class="status-card-bar"><div class="status-card-fill" id="statusAtendFill" style="width:0%"></div></div>
+      </div></a>
+    </div>
+  </section>
+
+  <!-- 2. ROADMAP -->
+  <section id="roadmap">
+    <div class="section-head">
+      <h2 class="section-title">Roadmap em 4 <span class="italic">fases</span></h2>
+      <span class="section-meta">~6 meses · 10h/semana</span>
+    </div>
+
+    <div class="roadmap">
+      <div class="roadmap-phase current">
+        <div class="roadmap-phase-num">01</div>
+        <div class="roadmap-phase-title">Foundations</div>
+        <div class="roadmap-phase-period">Mês 1 · maio/jun</div>
+        <ul class="roadmap-phase-items">
+          <li>Site v2 mergeado</li>
+          <li>Lead magnet ativo</li>
+          <li>Atendimento premium ativo</li>
+          <li>Press kit pronto</li>
+        </ul>
+        <span class="roadmap-phase-status status-now">Agora</span>
+      </div>
+      <div class="roadmap-phase next">
+        <div class="roadmap-phase-num">02</div>
+        <div class="roadmap-phase-title">Livro físico</div>
+        <div class="roadmap-phase-period">Mês 2-3 · jun/jul</div>
+        <ul class="roadmap-phase-items">
+          <li>Revisão 2ª edição</li>
+          <li>Capa + diagramação</li>
+          <li>KDP paperback</li>
+          <li>Lançamento físico</li>
+        </ul>
+        <span class="roadmap-phase-status status-next">Próximo</span>
+      </div>
+      <div class="roadmap-phase">
+        <div class="roadmap-phase-num">03</div>
+        <div class="roadmap-phase-title">Curso pré-venda</div>
+        <div class="roadmap-phase-period">Mês 3-4 · jul/ago</div>
+        <ul class="roadmap-phase-items">
+          <li>Currículo do curso</li>
+          <li>Página de pré-venda</li>
+          <li>Validação 50+ inscritos</li>
+          <li>Gravação se aprovado</li>
+        </ul>
+        <span class="roadmap-phase-status status-future">Depois</span>
+      </div>
+      <div class="roadmap-phase">
+        <div class="roadmap-phase-num">04</div>
+        <div class="roadmap-phase-title">Comunidade recorrente</div>
+        <div class="roadmap-phase-period">Mês 5-6 · set/out</div>
+        <ul class="roadmap-phase-items">
+          <li>Lançamento Círculo NMR</li>
+          <li>R$ 67/mês membership</li>
+          <li>Meta: 100-200 membros</li>
+          <li>Receita: R$ 6,7-13k/m</li>
+        </ul>
+        <span class="roadmap-phase-status status-future">Depois</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ESSA SEMANA (Próximas ações) -->
+  <section id="semana">
+    <div class="section-head">
+      <h2 class="section-title">Essa <span class="italic">semana</span></h2>
+      <span class="section-meta">7 dias · ~10h de trabalho</span>
+    </div>
+
+    <div class="semana-card">
+      <div class="semana-content">
+        <span class="semana-tag">Prioridade</span>
+        <h3 class="semana-title">Resolver as 5 decisões rápidas que destravam o livro</h3>
+        <ul class="semana-list">
+          <li class="semana-item">
+            <span class="semana-item-num">01</span>
+            <span class="semana-item-text">Aprovar sugestões dos 5 livros pro Cap 1 (Geni, Andreone, Adriana, Brigitte, RLi)</span>
+            <span class="semana-item-time">5 min</span>
+          </li>
+          <li class="semana-item">
+            <span class="semana-item-num">02</span>
+            <span class="semana-item-text">Confirmar autora amor cortês Cap 2 (Regina Navarro Lins?)</span>
+            <span class="semana-item-time">2 min</span>
+          </li>
+          <li class="semana-item">
+            <span class="semana-item-num">03</span>
+            <span class="semana-item-text">Autorizar restauração do título Cap 11 (Inteligência Erótica)</span>
+            <span class="semana-item-time">1 min</span>
+          </li>
+          <li class="semana-item">
+            <span class="semana-item-num">04</span>
+            <span class="semana-item-text">Escolher: "relação aberta" OU "relacionamento aberto" como termo padrão</span>
+            <span class="semana-item-time">2 min</span>
+          </li>
+          <li class="semana-item">
+            <span class="semana-item-num">05</span>
+            <span class="semana-item-text">Autorizar busca de bibliografia 2020-2026 (agente em background)</span>
+            <span class="semana-item-time">2 min</span>
+          </li>
+          <li class="semana-item">
+            <span class="semana-item-num">06</span>
+            <span class="semana-item-text">Tirar fotos profissionais (3-5 imagens) — agendar com fotógrafo</span>
+            <span class="semana-item-time">2-3h</span>
+          </li>
+          <li class="semana-item">
+            <span class="semana-item-num">07</span>
+            <span class="semana-item-text">Mandar mensagem pra Regina Navarro Lins pedindo prefácio da 2ª edição</span>
+            <span class="semana-item-time">15 min</span>
+          </li>
+          <li class="semana-item">
+            <span class="semana-item-num">08</span>
+            <span class="semana-item-text">Anunciar o pacote de atendimento premium (4 vagas) no Insta + Doctoralia</span>
+            <span class="semana-item-time">1h</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. DECISÕES BLOQUEADORAS -->
+  <section id="decisoes">
+    <div class="section-head">
+      <h2 class="section-title">Decisões <span class="italic">bloqueadoras</span></h2>
+      <span class="section-meta"><span id="decisoesPendentes">0</span> pendentes · marca conforme resolves</span>
+    </div>
+
+    <div class="decisoes-grid" id="decisoesGrid"></div>
+  </section>
+
+  <!-- 5. KANBAN POR FRENTE -->
+  <section id="kanban">
+    <div class="section-head">
+      <h2 class="section-title">Tarefas por <span class="italic">frente</span></h2>
+      <span class="section-meta">clica em qualquer tarefa pra marcar como feita</span>
+    </div>
+
+    <div class="kanban">
+      <div class="kanban-col" id="kanban-livro">
+        <div class="kanban-head">
+          <h3 class="kanban-title"><span class="kanban-emoji">📚</span> Livro 2ª edição</h3>
+          <span class="kanban-count" id="countLivro">0/0</span>
+        </div>
+        <ul class="kanban-tasks" id="tasksLivro"></ul>
+        <div class="kanban-progress">
+          <div class="kanban-progress-bar"><div class="kanban-progress-fill" id="progressLivro" style="width:0%"></div></div>
+          <div class="kanban-progress-text" id="textLivro">0% concluído</div>
+        </div>
+      </div>
+
+      <div class="kanban-col" id="kanban-site">
+        <div class="kanban-head">
+          <h3 class="kanban-title"><span class="kanban-emoji">🌐</span> Site</h3>
+          <span class="kanban-count" id="countSite">0/0</span>
+        </div>
+        <ul class="kanban-tasks" id="tasksSite"></ul>
+        <div class="kanban-progress">
+          <div class="kanban-progress-bar"><div class="kanban-progress-fill" id="progressSite" style="width:0%"></div></div>
+          <div class="kanban-progress-text" id="textSite">0% concluído</div>
+        </div>
+      </div>
+
+      <div class="kanban-col" id="kanban-imprensa">
+        <div class="kanban-head">
+          <h3 class="kanban-title"><span class="kanban-emoji">📰</span> Imprensa</h3>
+          <span class="kanban-count" id="countImprensa">0/0</span>
+        </div>
+        <ul class="kanban-tasks" id="tasksImprensa"></ul>
+        <div class="kanban-progress">
+          <div class="kanban-progress-bar"><div class="kanban-progress-fill" id="progressImprensa" style="width:0%"></div></div>
+          <div class="kanban-progress-text" id="textImprensa">0% concluído</div>
+        </div>
+      </div>
+
+      <div class="kanban-col" id="kanban-atendimento">
+        <div class="kanban-head">
+          <h3 class="kanban-title"><span class="kanban-emoji">💼</span> Atendimento Premium</h3>
+          <span class="kanban-count" id="countAtend">0/0</span>
+        </div>
+        <ul class="kanban-tasks" id="tasksAtend"></ul>
+        <div class="kanban-progress">
+          <div class="kanban-progress-bar"><div class="kanban-progress-fill" id="progressAtend" style="width:0%"></div></div>
+          <div class="kanban-progress-text" id="textAtend">0% concluído</div>
+        </div>
+      </div>
+
+      <div class="kanban-col" id="kanban-curso">
+        <div class="kanban-head">
+          <h3 class="kanban-title"><span class="kanban-emoji">🎓</span> Curso (mês 3+)</h3>
+          <span class="kanban-count" id="countCurso">0/0</span>
+        </div>
+        <ul class="kanban-tasks" id="tasksCurso"></ul>
+        <div class="kanban-progress">
+          <div class="kanban-progress-bar"><div class="kanban-progress-fill" id="progressCurso" style="width:0%"></div></div>
+          <div class="kanban-progress-text" id="textCurso">0% concluído</div>
+        </div>
+      </div>
+
+      <div class="kanban-col" id="kanban-comunidade">
+        <div class="kanban-head">
+          <h3 class="kanban-title"><span class="kanban-emoji">🤝</span> Comunidade (mês 5+)</h3>
+          <span class="kanban-count" id="countComunidade">0/0</span>
+        </div>
+        <ul class="kanban-tasks" id="tasksComunidade"></ul>
+        <div class="kanban-progress">
+          <div class="kanban-progress-bar"><div class="kanban-progress-fill" id="progressComunidade" style="width:0%"></div></div>
+          <div class="kanban-progress-text" id="textComunidade">0% concluído</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer-bar">
+    <span>📁 Documentos de apoio em <code>C:\Users\filip\NMR_Estrategia\</code> · gerado em maio/2026</span>
+    <button class="btn-reset" onclick="resetProgress()">Resetar progresso</button>
+  </div>
+</main>
+
+<script>
+// =========== DADOS ===========
+const DECISOES = [
+  { id:'d1', priority:'high', tag:'tag-livro', tagLabel:'livro', title:'Aprovar 5 livros sugeridos pra Cap 1 (lista de não-monogamia política)', time:'5 min' },
+  { id:'d2', priority:'high', tag:'tag-livro', tagLabel:'livro', title:'Confirmar Regina Navarro Lins como autora citada no Cap 2 (amor cortês)', time:'2 min' },
+  { id:'d3', priority:'high', tag:'tag-livro', tagLabel:'livro', title:'Restaurar título do Cap 11 (Inteligência Erótica)', time:'1 min' },
+  { id:'d4', priority:'high', tag:'tag-livro', tagLabel:'livro', title:'Padronizar terminologia: "relação aberta" vs "relacionamento aberto"', time:'2 min' },
+  { id:'d5', priority:'high', tag:'tag-livro', tagLabel:'livro', title:'Autorizar busca de bibliografia 2020-2026 (agente em background)', time:'2 min' },
+  { id:'d6', priority:'med', tag:'tag-livro', tagLabel:'livro', title:'Validar nova Introdução (reescrita 83% — ler 01_introducao.md)', time:'30 min' },
+  { id:'d7', priority:'med', tag:'tag-livro', tagLabel:'livro', title:'Decidir: pedir prefácio à Regina Navarro Lins?', time:'15 min' },
+  { id:'d8', priority:'med', tag:'tag-livro', tagLabel:'livro', title:'Direção da capa (sóbrio editorial / minimalista colorido / conceitual)', time:'discussão' },
+  { id:'d9', priority:'med', tag:'tag-livro', tagLabel:'livro', title:'Ferramenta de diagramação (Affinity Publisher recomendado)', time:'1 min' },
+  { id:'d10', priority:'high', tag:'tag-imprensa', tagLabel:'imprensa', title:'Tirar fotos profissionais (3-5 imagens)', time:'2-3h' },
+  { id:'d11', priority:'med', tag:'tag-imprensa', tagLabel:'imprensa', title:'Confirmar número CRP/DF completo', time:'1 min' },
+  { id:'d12', priority:'med', tag:'tag-imprensa', tagLabel:'imprensa', title:'Detalhes do livro prefaciado (autor, título, editora, data)', time:'5 min' },
+  { id:'d13', priority:'high', tag:'tag-site', tagLabel:'site', title:'Aprovar preview Vercel da branch evolucao-v2 e fazer merge na main', time:'15 min' },
+  { id:'d14', priority:'high', tag:'tag-site', tagLabel:'site', title:'Decidir: MailerLite OU Beehiiv pra captura de email', time:'5 min' },
+  { id:'d15', priority:'med', tag:'tag-site', tagLabel:'site', title:'IDs reais das 6 lives no canal YouTube', time:'10 min' },
+  { id:'d16', priority:'low', tag:'tag-site', tagLabel:'site', title:'URL específica matéria Yahoo (provável reposte UOL)', time:'5 min' },
+];
+
+const TASKS = {
+  livro: [
+    { id:'l1', t:'Auditoria estrutural v1 vs v2.13', meta:'feito', done:true },
+    { id:'l2', t:'Mapear marcadores pendentes', meta:'feito', done:true },
+    { id:'l3', t:'Aprovar sugestões dos 5 XXX (Cap 1)' },
+    { id:'l4', t:'Confirmar autora amor cortês (Cap 2)' },
+    { id:'l5', t:'Restaurar título Cap 11' },
+    { id:'l6', t:'Padronizar terminologia (relação×relacionamento)' },
+    { id:'l7', t:'Buscar bibliografia 2020-2026', meta:'depende OK' },
+    { id:'l8', t:'Validar Introdução nova (ler 01_introducao.md)' },
+    { id:'l9', t:'Auditoria capítulo a capítulo (8 capítulos a revisar)' },
+    { id:'l10', t:'Decidir capítulos novos opcionais (5 anos depois, casos clínicos, apêndice)' },
+    { id:'l11', t:'Pedir prefácio à Regina Navarro Lins' },
+    { id:'l12', t:'Direção da capa (3 caminhos)' },
+    { id:'l13', t:'Briefing pra designer da capa' },
+    { id:'l14', t:'Capa nova finalizada' },
+    { id:'l15', t:'Diagramação interior (Affinity Publisher)' },
+    { id:'l16', t:'Sumário automático + numeração' },
+    { id:'l17', t:'PDF print-ready (300dpi, sangra correta)' },
+    { id:'l18', t:'Setup paperback no KDP' },
+    { id:'l19', t:'Aprovar prova física Amazon' },
+    { id:'l20', t:'Atualizar ebook + preço (R$ 19,90 → R$ 34,90)' },
+    { id:'l21', t:'Lançamento físico (campanha 45 dias)' },
+  ],
+  site: [
+    { id:'s1', t:'Site v2 + Aldeia + Imprensa + Newsletter', meta:'feito', done:true },
+    { id:'s2', t:'Branch evolucao-v2 commitada e pushada', meta:'feito', done:true },
+    { id:'s3', t:'Aprovar preview Vercel + merge main' },
+    { id:'s4', t:'Configurar MailerLite/Beehiiv' },
+    { id:'s5', t:'Integrar form de captura via API' },
+    { id:'s6', t:'IDs reais 6 lives YouTube' },
+    { id:'s7', t:'URL Yahoo confirmada' },
+    { id:'s8', t:'Coletar 8-10 depoimentos Doctoralia' },
+    { id:'s9', t:'Plantar depoimentos no site' },
+    { id:'s10', t:'Adicionar livro prefaciado no Sobre' },
+    { id:'s11', t:'Página dedicada do livro físico (lançamento)' },
+    { id:'s12', t:'Migrar artigos Wix antigo pra blog próprio' },
+    { id:'s13', t:'Página de pré-venda do curso (mês 3)' },
+  ],
+  imprensa: [
+    { id:'i1', t:'Press kit pronto', meta:'feito', done:true },
+    { id:'i2', t:'Lista de 22 veículos priorizada', meta:'feito', done:true },
+    { id:'i3', t:'3 templates de pitch prontos', meta:'feito', done:true },
+    { id:'i4', t:'Tirar fotos profissionais (3-5)' },
+    { id:'i5', t:'Confirmar CRP/DF completo' },
+    { id:'i6', t:'Escolher 5 veículos Tier 1 pra começar' },
+    { id:'i7', t:'Pesquisar jornalista de cada (LinkedIn/site)' },
+    { id:'i8', t:'Adaptar pitch pra cada (5 versões)' },
+    { id:'i9', t:'Mandar pitches (2-3/semana)' },
+    { id:'i10', t:'Follow-up após 5 dias úteis' },
+    { id:'i11', t:'Calendário editorial pelos próximos 6 meses' },
+    { id:'i12', t:'Meta 90 dias: 3-5 entrevistas novas' },
+  ],
+  atendimento: [
+    { id:'a1', t:'Definir pacote premium (R$ 1.800-2.400/mês)' },
+    { id:'a2', t:'Material de venda do pacote' },
+    { id:'a3', t:'Anunciar 4 vagas no Insta + Doctoralia' },
+    { id:'a4', t:'Fechar 1ª vaga' },
+    { id:'a5', t:'Fechar 2ª vaga' },
+    { id:'a6', t:'Fechar 3ª vaga' },
+    { id:'a7', t:'Fechar 4ª vaga' },
+    { id:'a8', t:'Lista de espera ativa (5+ inscritos)' },
+  ],
+  curso: [
+    { id:'c1', t:'Estruturar currículo (8 módulos)' },
+    { id:'c2', t:'Worksheets e exercícios' },
+    { id:'c3', t:'Página de pré-venda' },
+    { id:'c4', t:'Lista de espera abre' },
+    { id:'c5', t:'Pré-venda: 30+ inscritos? (validação)' },
+    { id:'c6', t:'Equipamento (mic + iluminação)' },
+    { id:'c7', t:'Gravação 8 módulos' },
+    { id:'c8', t:'Edição (CapCut ou contratar)' },
+    { id:'c9', t:'Plataforma (Kiwify ou self-hosted)' },
+    { id:'c10', t:'Lançamento aberto pra audiência' },
+  ],
+  comunidade: [
+    { id:'co1', t:'Definir nome ("Círculo NMR"?)' },
+    { id:'co2', t:'Plataforma (Discord ou Circle)' },
+    { id:'co3', t:'Definir mensalidade (R$ 47-97/mês)' },
+    { id:'co4', t:'Estrutura: 1 ao vivo/mês + biblioteca + fórum' },
+    { id:'co5', t:'Convidar alunos do curso (sementes)' },
+    { id:'co6', t:'Lançamento aberto' },
+    { id:'co7', t:'Meta: 100+ membros em 60 dias' },
+    { id:'co8', t:'Receita recorrente projetada R$ 6,7-13k/mês' },
+  ],
+};
+
+const FRENTE_MAP = {
+  livro: { tasks: TASKS.livro, listEl: 'tasksLivro', countEl: 'countLivro', progEl: 'progressLivro', textEl: 'textLivro', statusValue: 'statusLivroValue', statusDetail: 'statusLivroDetail', statusFill: 'statusLivroFill' },
+  site:  { tasks: TASKS.site, listEl: 'tasksSite', countEl: 'countSite', progEl: 'progressSite', textEl: 'textSite', statusValue: 'statusSiteValue', statusDetail: 'statusSiteDetail', statusFill: 'statusSiteFill' },
+  imprensa: { tasks: TASKS.imprensa, listEl: 'tasksImprensa', countEl: 'countImprensa', progEl: 'progressImprensa', textEl: 'textImprensa', statusValue: 'statusImprensaValue', statusDetail: 'statusImprensaDetail', statusFill: 'statusImprensaFill' },
+  atendimento: { tasks: TASKS.atendimento, listEl: 'tasksAtend', countEl: 'countAtend', progEl: 'progressAtend', textEl: 'textAtend', statusValue: 'statusAtendValue', statusDetail: 'statusAtendDetail', statusFill: 'statusAtendFill' },
+  curso: { tasks: TASKS.curso, listEl: 'tasksCurso', countEl: 'countCurso', progEl: 'progressCurso', textEl: 'textCurso' },
+  comunidade: { tasks: TASKS.comunidade, listEl: 'tasksComunidade', countEl: 'countComunidade', progEl: 'progressComunidade', textEl: 'textComunidade' },
+};
+
+// =========== ESTADO PERSISTENTE ===========
+const STORAGE_KEY = 'nmr_plano_state_v1';
+
+function loadState() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || { tasks: {}, decisoes: {} };
+  } catch (e) { return { tasks: {}, decisoes: {} }; }
+}
+
+function saveState(state) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+let state = loadState();
+
+// pré-marcar tarefas done por padrão (somente na primeira carga)
+Object.values(TASKS).flat().forEach(t => {
+  if (t.done && state.tasks[t.id] === undefined) {
+    state.tasks[t.id] = true;
+  }
+});
+saveState(state);
+
+// =========== RENDER ===========
+function renderTasks(frenteKey) {
+  const cfg = FRENTE_MAP[frenteKey];
+  const list = document.getElementById(cfg.listEl);
+  list.innerHTML = '';
+  let done = 0;
+  cfg.tasks.forEach(task => {
+    const isDone = state.tasks[task.id] === true;
+    if (isDone) done++;
+    const li = document.createElement('li');
+    li.className = 'task' + (isDone ? ' done' : '');
+    li.innerHTML = `
+      <div class="task-checkbox"></div>
+      <div class="task-content">
+        <div class="task-title">${task.t}</div>
+        ${task.meta ? `<div class="task-meta"><span class="task-time">${task.meta}</span></div>` : ''}
+      </div>
+    `;
+    li.onclick = () => {
+      state.tasks[task.id] = !isDone;
+      saveState(state);
+      renderAll();
+    };
+    list.appendChild(li);
+  });
+  const total = cfg.tasks.length;
+  const pct = total > 0 ? Math.round(done / total * 100) : 0;
+  document.getElementById(cfg.countEl).textContent = `${done}/${total}`;
+  document.getElementById(cfg.progEl).style.width = pct + '%';
+  document.getElementById(cfg.textEl).textContent = `${pct}% concluído`;
+  if (cfg.statusValue) {
+    document.getElementById(cfg.statusValue).textContent = pct + '%';
+    document.getElementById(cfg.statusDetail).textContent = `${done} de ${total} tarefas`;
+    document.getElementById(cfg.statusFill).style.width = pct + '%';
+  }
+  return { done, total };
+}
+
+function renderDecisoes() {
+  const grid = document.getElementById('decisoesGrid');
+  grid.innerHTML = '';
+  let pendentes = 0;
+  DECISOES.forEach(d => {
+    const isResolved = state.decisoes[d.id] === true;
+    if (!isResolved) pendentes++;
+    const div = document.createElement('div');
+    div.className = 'decisao priority-' + d.priority + (isResolved ? ' resolved' : '');
+    div.innerHTML = `
+      <div class="decisao-head">
+        <div class="decisao-title">${d.title}</div>
+        <span class="decisao-time">${d.time}</span>
+      </div>
+      <div class="decisao-meta">
+        <span class="decisao-tag ${d.tag}">${d.tagLabel}</span>
+        <span class="decisao-tag">prioridade ${d.priority === 'high' ? 'alta' : d.priority === 'med' ? 'média' : 'baixa'}</span>
+      </div>
+      <div class="decisao-resolve">
+        <div class="decisao-checkbox ${isResolved ? 'checked' : ''}" data-id="${d.id}"></div>
+        <span class="decisao-resolve-label">${isResolved ? 'Resolvida' : 'Marcar como resolvida'}</span>
+      </div>
+    `;
+    div.querySelector('.decisao-checkbox').onclick = (e) => {
+      e.stopPropagation();
+      state.decisoes[d.id] = !isResolved;
+      saveState(state);
+      renderAll();
+    };
+    grid.appendChild(div);
+  });
+  document.getElementById('decisoesPendentes').textContent = pendentes;
+}
+
+function renderGlobal() {
+  const all = Object.values(TASKS).flat();
+  const totalT = all.length;
+  const doneT = all.filter(t => state.tasks[t.id] === true).length;
+  const totalD = DECISOES.length;
+  const doneD = DECISOES.filter(d => state.decisoes[d.id] === true).length;
+  const pct = Math.round(((doneT + doneD) / (totalT + totalD)) * 100);
+  document.getElementById('globalProgressNum').textContent = pct + '%';
+  document.getElementById('globalProgressFill').style.width = pct + '%';
+}
+
+function renderAll() {
+  Object.keys(FRENTE_MAP).forEach(renderTasks);
+  renderDecisoes();
+  renderGlobal();
+}
+
+function resetProgress() {
+  if (!confirm('Vai zerar todo o progresso. Tem certeza?')) return;
+  state = { tasks: {}, decisoes: {} };
+  // re-marcar os done by default
+  Object.values(TASKS).flat().forEach(t => {
+    if (t.done) state.tasks[t.id] = true;
+  });
+  saveState(state);
+  renderAll();
+}
+
+renderAll();
+</script>
+
+</body>
+</html>
