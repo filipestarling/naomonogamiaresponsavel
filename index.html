@@ -76,13 +76,7 @@
       "name": "Não Monogamia Responsável",
       "author": {"@id": "https://naomonogamiaresponsavel.com.br/#filipe"},
       "inLanguage": "pt-BR",
-      "image": "https://naomonogamiaresponsavel.com.br/images/livro.jpg",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "bestRating": "5",
-        "ratingCount": "45"
-      }
+      "image": "https://naomonogamiaresponsavel.com.br/images/livro.jpg"
     },
     {
       "@type": "ProfessionalService",
@@ -94,7 +88,37 @@
       "areaServed": ["Brasil", "Worldwide"],
       "availableLanguage": ["Portuguese", "English"],
       "serviceType": ["Psicoterapia de casal", "Terapia individual", "Atendimento online", "Sexologia clínica"],
-      "provider": {"@id": "https://naomonogamiaresponsavel.com.br/#filipe"}
+      "provider": {"@id": "https://naomonogamiaresponsavel.com.br/#filipe"},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "ratingCount": "63",
+        "reviewCount": "63"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "author": {"@type": "Person", "name": "Jenifer"},
+          "datePublished": "2025-02-13",
+          "reviewBody": "Um especialista completo. Minucioso, profundo e detalhado nas explicações. Cria um ambiente seguro e sem tabus."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "author": {"@type": "Person", "name": "Paciente (Terapia de casal)"},
+          "datePublished": "2025-01-04",
+          "reviewBody": "Filipe recebeu meu marido e eu para terapia de casal. Fomos ouvidos com muita empatia, cuidado e respeito. Teve sensibilidade para compreender nossa questão, propôs reflexões profundas e nos ofereceu exercícios práticos."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "author": {"@type": "Person", "name": "S.A."},
+          "datePublished": "2025-10-06",
+          "reviewBody": "Admiro muito o profissionalismo e a maneira ética como ele trabalha. Sua capacidade de conectar os pontos e me mostrar padrões que eu não conseguia ver sozinho(a) é incrível."
+        }
+      ]
     },
     {
       "@type": "WebSite",
@@ -102,6 +126,68 @@
       "name": "Não-Monogamia Responsável",
       "publisher": {"@id": "https://naomonogamiaresponsavel.com.br/#filipe"},
       "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://naomonogamiaresponsavel.com.br/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vocês me ajudam a abrir a relação, ou tentam me convencer disso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nenhuma das duas. Meu trabalho é te ajudar a entender o que você sente e o que você quer — sem agenda prévia. Atendo muita gente que decide manter a monogamia depois de processar a dúvida, e isso é um resultado tão válido quanto qualquer outro. Não tenho 'lado' nessa conversa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se só uma pessoa do casal quiser fazer terapia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Funciona bem. Em muitos casos é assim que começa — uma pessoa busca clareza individualmente, e depois decide se traz o/a parceiro/a. Também atendo só uma das partes durante um processo longo, sem problemas. O importante é cada um/uma ter seu próprio espaço de elaboração."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso fazer só uma ou duas sessões pra orientação pontual?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode. Algumas pessoas chegam com uma dúvida muito específica e em 1–3 sessões já encontram o que precisavam. Outras descobrem que querem um processo mais longo. Você decide o ritmo — não tem contrato mínimo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o pagamento? Tem como pedir reembolso pro convênio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pagamento via PIX após cada sessão. Não atendo via convênio direto, mas emito recibo psicológico pra você solicitar reembolso ao plano de saúde — Amil, Bradesco Saúde, SulAmérica, Unimed e outros geralmente reembolsam total ou parcialmente. Posso te orientar sobre o procedimento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Online é tão eficaz quanto presencial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pra terapia conversacional, sim — a literatura mostra eficácia equivalente. Pra EMDR/Brainspotting (modalidades que uso pra trauma e ciúme), há protocolos online estabelecidos. A única diferença real é que o setting é a sua casa, não a clínica — o que pode até ser uma vantagem em alguns casos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês atendem polycules (3 ou mais pessoas juntas)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Tenho experiência com tríades, polycules de 4+ e configurações híbridas. As sessões são mais longas (90 min em vez de 50) e geralmente fazemos um trabalho que mistura encontros de todo o grupo com sessões individuais ou de subgrupos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre você e um psicólogo que atende casais normais?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Especialização. A maior parte da formação em terapia de casal pressupõe modelo monogâmico — e isso aparece nas perguntas, nas leituras, na forma como o terapeuta reage. Atendo há 20 anos com foco específico em não-monogamia e relacionalidades complexas, escrevi o livro de referência em português sobre o tema, e trabalho com EMDR e Brainspotting pra questões mais profundas (ciúme, traumas de apego)."
+          }
+        }
+      ]
     }
   ]
 }
@@ -2007,6 +2093,290 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ============ SUBTÍTULO EMOCIONAL HERO ============ */
+.hero-empathy {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--plum);
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 32rem;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* ============ PRA QUEM É ESSE ATENDIMENTO ============ */
+#para-quem {
+  padding: 6rem 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.para-quem-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.para-quem-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0.5rem auto 1rem;
+  max-width: 36rem;
+}
+.para-quem-lead {
+  color: var(--muted);
+  max-width: 38rem;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+.para-quem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.para-quem-card {
+  background: var(--paper-deep);
+  padding: 1.75rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.para-quem-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.para-quem-card:hover {
+  background: var(--paper);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(20, 17, 15, 0.06);
+}
+.para-quem-card:hover::before { transform: scaleX(1); }
+.para-quem-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.para-quem-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+  font-weight: 500;
+  line-height: 1.3;
+}
+.para-quem-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.para-quem-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+.cta-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 100px;
+  border: 1px solid var(--ink);
+  transition: all 0.2s ease;
+}
+.cta-mini:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+.cta-mini::after {
+  content: "→";
+  transition: transform 0.2s;
+}
+.cta-mini:hover::after { transform: translateX(3px); }
+
+/* ============ COMO FUNCIONA ============ */
+#como-funciona {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--paper-deep);
+  border-radius: 24px;
+  margin-bottom: 5rem;
+}
+.como-funciona-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.como-funciona-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+.como-funciona-grid::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: var(--line-strong);
+  z-index: 0;
+}
+.passo {
+  background: var(--paper);
+  padding: 2rem 1.5rem;
+  border-radius: 14px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  border: 1px solid var(--line);
+}
+.passo-num {
+  width: 56px; height: 56px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 auto 1rem;
+}
+.passo h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.passo p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.passo-tempo {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  background: var(--accent-soft);
+  border-radius: 4px;
+}
+
+/* ============ INFO DE CONVÊNIO/RECIBO ============ */
+.info-convenio {
+  background: var(--paper-deep);
+  border-left: 3px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.info-convenio strong {
+  color: var(--ink);
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* ============ FAQ ============ */
+#faq {
+  padding: 5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.faq-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.faq-item {
+  background: var(--paper-deep);
+  padding: 1.4rem 1.8rem;
+  border-radius: 12px;
+  margin-bottom: 0.85rem;
+  border-left: 3px solid transparent;
+  transition: border-color 0.2s, background 0.2s;
+}
+.faq-item[open] {
+  border-left-color: var(--accent);
+  background: var(--paper);
+}
+.faq-item summary {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  color: var(--ink);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  color: var(--accent);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after {
+  content: "−";
+}
+.faq-item p {
+  margin-top: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ============ CTA MINI INLINE (espalhados) ============ */
+.cta-inline {
+  text-align: center;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+}
+.cta-inline-text {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+}
+
+/* Responsividade pras novas seções */
+@media (max-width: 900px) {
+  .para-quem-grid { grid-template-columns: repeat(2, 1fr); }
+  .como-funciona-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .como-funciona-grid::before { display: none; }
+}
+@media (max-width: 540px) {
+  .para-quem-grid { grid-template-columns: 1fr; }
+  .como-funciona-grid { grid-template-columns: 1fr; }
+  #como-funciona { padding: 3rem 1.25rem; margin: 0 1rem 3rem; }
+  .hero-empathy { font-size: 1rem; }
+}
 </style>
 </head>
 <body>
@@ -2031,10 +2401,10 @@ footer {
 <nav>
   <div class="logo">Filipe Starling</div>
   <ul id="nav-menu">
+    <li><a href="#para-quem">Pra quem é</a></li>
     <li><a href="#atendimento">Atendimento</a></li>
     <li><a href="#livro">Livro</a></li>
-    <li><a href="#newsletter">Capítulo grátis</a></li>
-    <li><a href="#lives">Lives</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="https://api.whatsapp.com/send?phone=5561991620965" class="nav-cta" target="_blank" rel="noopener noreferrer">Agendar sessão</a></li>
   </ul>
@@ -2053,6 +2423,9 @@ footer {
       com o <span class="italic">cuidado</span> <br>
       <span class="serif-alt">que ela merece.</span>
     </h1>
+    <p class="hero-empathy">
+      Para quem está confuso sobre o que sente, ou se sente sozinho num movimento que poucos entendem.
+    </p>
     <p class="hero-subtitle">
       Psicólogo clínico há 20 anos. Atendo casais que querem repensar a monogamia sem destruir o que construíram. Escuta científica, sem fórmula pronta, sem julgamento.
     </p>
@@ -2105,6 +2478,58 @@ footer {
     <span class="marquee-item">acordos relacionais</span>
   </div>
 </div>
+
+<!-- PRA QUEM É ESSE ATENDIMENTO -->
+<section id="para-quem">
+  <div class="para-quem-header">
+    <span class="mono" style="color: var(--accent);">Pra quem é esse atendimento</span>
+    <h2 class="display para-quem-title">
+      Você se reconhece em <span class="italic">alguma dessas situações?</span>
+    </h2>
+    <p class="para-quem-lead">
+      Não precisa estar "pronto" ou "decidido". O atendimento serve pra te ajudar a entender o que você sente — e o que dá pra fazer com isso.
+    </p>
+  </div>
+
+  <div class="para-quem-grid">
+    <div class="para-quem-card">
+      <span class="para-quem-icon">🔥</span>
+      <h3>Ciúme que não passa</h3>
+      <p>Você intelectualmente aceita, mas o corpo trava cada vez que ela/ele sai com outra pessoa.</p>
+    </div>
+    <div class="para-quem-card">
+      <span class="para-quem-icon">🌪</span>
+      <h3>Acabou de saber de uma traição</h3>
+      <p>Vocês querem ressignificar, não terminar — mas não sabem por onde começar essa conversa.</p>
+    </div>
+    <div class="para-quem-card">
+      <span class="para-quem-icon">💭</span>
+      <h3>Casal querendo abrir, com medo</h3>
+      <p>Vocês conversam sobre isso há meses. Dão um passo, travam, voltam. Querem ajuda pra avançar com segurança.</p>
+    </div>
+    <div class="para-quem-card">
+      <span class="para-quem-icon">⚡</span>
+      <h3>Já em relação aberta, pegando fogo</h3>
+      <p>Os acordos não estão funcionando. Tem gente machucada. Precisa de alguém de fora pra mediar.</p>
+    </div>
+    <div class="para-quem-card">
+      <span class="para-quem-icon">🌱</span>
+      <h3>Curiosidade, sem par no momento</h3>
+      <p>Você tá saindo de uma monogamia e quer entender outros modelos antes de repetir o de sempre.</p>
+    </div>
+    <div class="para-quem-card">
+      <span class="para-quem-icon">🌈</span>
+      <h3>Crise de identidade afetiva ou sexual</h3>
+      <p>Você está descobrindo que talvez sempre tenha sido diferente do que era esperado de você.</p>
+    </div>
+  </div>
+
+  <div class="para-quem-cta">
+    <a href="https://api.whatsapp.com/send?phone=5561991620965" class="cta-mini" target="_blank" rel="noopener noreferrer">
+      Conversar sobre o meu caso
+    </a>
+  </div>
+</section>
 
 <!-- IMPRENSA · Como visto em -->
 <section id="imprensa" class="imprensa-section">
@@ -2191,26 +2616,81 @@ footer {
         Falar no WhatsApp
         <span>↗</span>
       </a>
+
+      <div class="info-convenio">
+        <strong>Sobre convênios e recibos</strong>
+        Não atendo via convênio direto — isso me permite manter sessões mais longas e individualizadas. <strong style="display:inline; color:var(--accent); font-size:0.92rem;">Mas:</strong> emito recibo psicológico para você solicitar reembolso ao seu plano de saúde. Funciona bem com Amil, Bradesco Saúde, SulAmérica, Unimed e outros.
+      </div>
     </div>
   </div>
 
-  <!-- Depoimentos · TODO: substituir placeholders pelos depoimentos reais (anonimizados) coletados do Doctoralia -->
+  <!-- Depoimentos reais extraídos do Doctoralia (perfil público, 63 avaliações 5★) -->
   <div class="depoimentos-grid">
     <div class="depoimento">
       <div class="depoimento-stars">★★★★★</div>
-      <p class="depoimento-text">[ TODO: Depoimento 1 — citar caso real anonimizado de casal hétero abrindo a relação. Idealmente 2-3 frases, tom autêntico. ]</p>
-      <span class="depoimento-author">— Paciente · Doctoralia</span>
+      <p class="depoimento-text">"Um especialista completo. Minucioso, profundo e detalhado nas explicações. Cria um ambiente seguro e sem tabus. Oferece orientações perspicazes para enfrentar desafios e encontrar novas perspectivas."</p>
+      <span class="depoimento-author">— Jenifer · Doctoralia · fev/2025</span>
     </div>
     <div class="depoimento">
       <div class="depoimento-stars">★★★★★</div>
-      <p class="depoimento-text">[ TODO: Depoimento 2 — sobre escuta sem julgamento, ou específico sobre ciúme. ]</p>
-      <span class="depoimento-author">— Paciente · Doctoralia</span>
+      <p class="depoimento-text">"Filipe recebeu meu marido e eu para terapia de casal. Fomos ouvidos com muita empatia, cuidado e respeito. Teve sensibilidade para compreender nossa questão, propôs reflexões profundas e nos ofereceu exercícios práticos. Fiquei muito satisfeita e senti muita confiança."</p>
+      <span class="depoimento-author">— Paciente · Terapia de casal online · jan/2025</span>
     </div>
     <div class="depoimento">
       <div class="depoimento-stars">★★★★★</div>
-      <p class="depoimento-text">[ TODO: Depoimento 3 — sobre abordagem científica, EMDR ou efeito do trabalho. ]</p>
-      <span class="depoimento-author">— Paciente · Doctoralia</span>
+      <p class="depoimento-text">"Admiro muito o profissionalismo e a maneira ética como ele trabalha. Sua capacidade de conectar os pontos e me mostrar padrões que eu não conseguia ver sozinho(a) é incrível."</p>
+      <span class="depoimento-author">— S.A. · Doctoralia · out/2025</span>
     </div>
+  </div>
+
+  <!-- Link pro Doctoralia público -->
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="https://www.doctoralia.com.br/filipe-starling/psicologo-sexologo/brasilia" target="_blank" rel="noopener noreferrer" style="color: var(--muted); font-size: 0.9rem; text-decoration: none; border-bottom: 1px dotted var(--muted);">
+      Ver todas as 63 avaliações no Doctoralia ↗
+    </a>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA O PRIMEIRO ATENDIMENTO -->
+<section id="como-funciona">
+  <div class="como-funciona-header">
+    <span class="mono" style="color: var(--accent);">Como funciona</span>
+    <h2 class="display section-title" style="margin-top: 0.5rem;">
+      Quatro passos até a <span class="italic">primeira sessão</span>.
+    </h2>
+  </div>
+
+  <div class="como-funciona-grid">
+    <div class="passo">
+      <div class="passo-num">1</div>
+      <h4>Mensagem inicial</h4>
+      <p>Você manda 2–3 frases no WhatsApp sobre o que está rolando. Sem formulário, sem questionário longo.</p>
+      <span class="passo-tempo">5 min</span>
+    </div>
+    <div class="passo">
+      <div class="passo-num">2</div>
+      <h4>Conversa rápida</h4>
+      <p>Marcamos uma chamada curta gratuita pra eu entender melhor e você sentir se faz sentido continuar.</p>
+      <span class="passo-tempo">20 min · grátis</span>
+    </div>
+    <div class="passo">
+      <div class="passo-num">3</div>
+      <h4>Sessão de avaliação</h4>
+      <p>Primeira sessão completa: anamnese, escuta detalhada, alinhamento dos objetivos do trabalho.</p>
+      <span class="passo-tempo">50 min</span>
+    </div>
+    <div class="passo">
+      <div class="passo-num">4</div>
+      <h4>Plano combinado</h4>
+      <p>Definimos juntos a frequência (semanal/quinzenal), formato (individual ou casal) e foco terapêutico.</p>
+      <span class="passo-tempo">flexível</span>
+    </div>
+  </div>
+
+  <div class="para-quem-cta">
+    <a href="https://api.whatsapp.com/send?phone=5561991620965" class="cta-mini" target="_blank" rel="noopener noreferrer">
+      Mandar a primeira mensagem
+    </a>
   </div>
 </section>
 
@@ -2613,6 +3093,51 @@ footer {
       <span class="btn-arrow">↗</span>
     </a>
   </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-header">
+    <span class="mono" style="color: var(--accent);">Perguntas frequentes</span>
+    <h2 class="display section-title" style="margin-top: 0.5rem;">
+      O que costumam me <span class="italic">perguntar antes</span>.
+    </h2>
+  </div>
+
+  <details class="faq-item">
+    <summary>Vocês me ajudam a abrir a relação, ou tentam me convencer disso?</summary>
+    <p>Nenhuma das duas. Meu trabalho é te ajudar a entender o que você sente e o que você quer — sem agenda prévia. Atendo muita gente que decide manter a monogamia depois de processar a dúvida, e isso é um resultado tão válido quanto qualquer outro. Não tenho "lado" nessa conversa.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>E se só uma pessoa do casal quiser fazer terapia?</summary>
+    <p>Funciona bem. Em muitos casos é assim que começa — uma pessoa busca clareza individualmente, e depois decide se traz o/a parceiro/a. Também atendo só uma das partes durante um processo longo, sem problemas. O importante é cada um/uma ter seu próprio espaço de elaboração.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Posso fazer só uma ou duas sessões pra orientação pontual?</summary>
+    <p>Pode. Algumas pessoas chegam com uma dúvida muito específica e em 1–3 sessões já encontram o que precisavam. Outras descobrem que querem um processo mais longo. Você decide o ritmo — não tem contrato mínimo.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Como funciona o pagamento? Tem como pedir reembolso pro convênio?</summary>
+    <p>Pagamento via PIX após cada sessão. Não atendo via convênio direto, mas emito recibo psicológico pra você solicitar reembolso ao plano de saúde — Amil, Bradesco Saúde, SulAmérica, Unimed e outros geralmente reembolsam total ou parcialmente. Posso te orientar sobre o procedimento.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Online é tão eficaz quanto presencial?</summary>
+    <p>Pra terapia conversacional (que é o que fazemos), sim — a literatura mostra eficácia equivalente. Pra EMDR/Brainspotting (modalidades que uso pra trauma e ciúme), há protocolos online estabelecidos. A única diferença real é que o setting é a sua casa, não a clínica — o que pode até ser uma vantagem em alguns casos.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Vocês atendem polycules (3 ou mais pessoas juntas)?</summary>
+    <p>Sim. Tenho experiência com tríades, polycules de 4+ e configurações híbridas. As sessões são mais longas (90 min em vez de 50) e geralmente fazemos um trabalho que mistura encontros de todo o grupo com sessões individuais ou de subgrupos.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Qual a diferença entre você e um psicólogo que atende casais "normais"?</summary>
+    <p>Especialização. A maior parte da formação em terapia de casal pressupõe modelo monogâmico — e isso aparece nas perguntas, nas leituras, na forma como o terapeuta reage. Atendo há 20 anos com foco específico em não-monogamia e relacionalidades complexas, escrevi o livro de referência em português sobre o tema, e trabalho com EMDR e Brainspotting pra questões mais profundas (ciúme, traumas de apego).</p>
+  </details>
 </section>
 
 <!-- CTA FINAL -->

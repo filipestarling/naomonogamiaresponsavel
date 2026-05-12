@@ -66,7 +66,76 @@
       "areaServed": "Worldwide",
       "availableLanguage": ["English", "Portuguese"],
       "serviceType": ["Online couples therapy", "Polyamory counseling", "Ethical non-monogamy therapy", "Individual psychotherapy"],
-      "provider": {"@id": "https://naomonogamiaresponsavel.com.br/#filipe"}
+      "provider": {"@id": "https://naomonogamiaresponsavel.com.br/#filipe"},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "ratingCount": "63",
+        "reviewCount": "63"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://naomonogamiaresponsavel.com.br/english.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does payment work from abroad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most international clients use Wise (formerly TransferWise) or PayPal to send payment in their local currency. The conversion to BRL happens at the platform's exchange rate — usually within 1-2% of the mid-market rate. Brazilian clients abroad with a Brazilian bank account can use PIX instantly. I'll send specific instructions when we schedule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do time zones work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I'm based in Brasília (BRT, UTC−3). I work mornings and evenings local time, which generally works well for clients in the Americas (same or adjacent time zones) and is doable for Europe (my morning = their afternoon). For Asia/Pacific, we can schedule my early morning or late night."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is your Brazilian psychology license valid for clients abroad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I'm licensed by the Conselho Federal de Psicologia (CFP) in Brazil. International tele-therapy regulations vary by country — for most clients abroad, accessing therapy from a Brazilian psychologist is legal as the service is provided from Brazil. I'm happy to discuss this in your specific case during our intro call."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with individuals, or only couples?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both. About half of my practice is individual therapy (often related to relationship questions but not exclusively — anxiety, identity, sexuality, trauma). The other half is couples and polycules, sometimes with 3+ people in the session."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my partner doesn't speak English?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I can conduct sessions in mixed Portuguese-English when needed — useful for binational couples. Just let me know in advance and we'll plan accordingly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from BetterHelp or Talkspace?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Those platforms match you with a generalist therapist for short-form chat-based support. My practice is specialized (relationships, sexuality, non-monogamy), session-based (50 min deep work, not chat), and I personally see every client across the full arc of therapy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send me a WhatsApp message (English or Portuguese) telling me briefly what you're looking for. I'll reply within 24 hours with availability and we can schedule a 20-minute free intro call to see if we're a good fit before committing to a full session."
+          }
+        }
+      ]
     }
   ]
 }
@@ -248,6 +317,87 @@ section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
   content: "→"; position: absolute; left: 0; color: var(--accent);
 }
 
+/* Situations cards */
+.situations-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+}
+.situation-card {
+  background: var(--paper-deep);
+  padding: 1.75rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.situation-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.situation-card:hover {
+  background: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(20, 17, 15, 0.06);
+}
+.situation-card:hover::before { transform: scaleX(1); }
+.situation-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.situation-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--plum);
+  font-weight: 500;
+  line-height: 1.3;
+}
+.situation-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.situations-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.cta-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 100px;
+  border: 1px solid var(--ink);
+  transition: all 0.2s ease;
+}
+.cta-mini:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+.cta-mini::after {
+  content: "→";
+  transition: transform 0.2s;
+}
+.cta-mini:hover::after { transform: translateX(3px); }
+@media (max-width: 900px) {
+  .situations-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .situations-grid { grid-template-columns: 1fr; }
+}
+
 /* Pricing */
 .pricing-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
@@ -372,8 +522,8 @@ footer a { color: var(--accent); text-decoration: none; }
   <div class="logo">Filipe Starling</div>
   <ul>
     <li><a href="#who">Who it's for</a></li>
+    <li><a href="#situations">Situations</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#about">About</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="https://api.whatsapp.com/send?phone=5561991620965&text=Hi%20Filipe%2C%20I%27d%20like%20to%20book%20a%20therapy%20session%20in%20English" class="nav-cta" target="_blank" rel="noopener noreferrer">Book a session</a></li>
   </ul>
@@ -446,6 +596,53 @@ footer a { color: var(--accent); text-decoration: none; }
         <li>U.S./European clients pay in USD or EUR at favorable exchange rate</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<!-- SITUATIONS -->
+<section id="situations">
+  <span class="section-eyebrow mono">Common situations</span>
+  <h2 class="section-title display">Do you recognize yourself in any of these?</h2>
+  <p class="section-lead">
+    You don't need to have it figured out before starting. The work is precisely about
+    helping you understand what you're feeling — and what to do with it.
+  </p>
+  <div class="situations-grid">
+    <div class="situation-card">
+      <span class="situation-icon">🔥</span>
+      <h3>Jealousy that won't let up</h3>
+      <p>You intellectually accept it, but your body locks up every time they go out with someone else.</p>
+    </div>
+    <div class="situation-card">
+      <span class="situation-icon">🌪</span>
+      <h3>Just learned about an affair</h3>
+      <p>You want to repair, not end it — but neither of you knows where to start the conversation.</p>
+    </div>
+    <div class="situation-card">
+      <span class="situation-icon">💭</span>
+      <h3>Couple wanting to open up — afraid</h3>
+      <p>You've been talking about this for months. You take a step, freeze, walk it back. You want help moving forward safely.</p>
+    </div>
+    <div class="situation-card">
+      <span class="situation-icon">⚡</span>
+      <h3>Already open — and it's hard</h3>
+      <p>The agreements aren't working. Someone is hurt. You need an outside perspective to mediate.</p>
+    </div>
+    <div class="situation-card">
+      <span class="situation-icon">🌱</span>
+      <h3>Curious, no partner right now</h3>
+      <p>You're coming out of a monogamous chapter and want to understand other models before repeating the same pattern.</p>
+    </div>
+    <div class="situation-card">
+      <span class="situation-icon">🌈</span>
+      <h3>Crisis of relational or sexual identity</h3>
+      <p>You're realizing you may have always been different from what was expected of you.</p>
+    </div>
+  </div>
+  <div class="situations-cta">
+    <a href="https://api.whatsapp.com/send?phone=5561991620965&text=Hi%20Filipe%2C%20I%27d%20like%20to%20talk%20about%20my%20situation" class="cta-mini" target="_blank" rel="noopener noreferrer">
+      Talk about my situation
+    </a>
   </div>
 </section>
 
